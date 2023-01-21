@@ -1,10 +1,12 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
   components: {
     AppHeader: AppHeader,
-    AppMain: AppMain
+    AppMain: AppMain,
+    AppFooter: AppFooter
   }
 }
 </script>
@@ -12,8 +14,8 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
+  <AppFooter />
 
-  <footer></footer>
 
 </template>
 
@@ -38,7 +40,7 @@ body {
     serif;
   font-family: 'Domine',
     serif;
-  height: 100vh;
+  height: auto;
 
 }
 

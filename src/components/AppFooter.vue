@@ -7,6 +7,25 @@ export default {
 
 <template>
     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="s-footer">
+                    <button>
+                        SIGN-UP NOW!
+                    </button>
+                </div>
+                <div class="e-footer">
+                    <h3>FOLLOW US</h3>
+                    <div class="socials">
+                        <a href=""><img src="../../public/img/footer-facebook.png" alt=""></a>
+                        <a href=""><img src="../../public/img/footer-twitter.png" alt=""></a>
+                        <a href=""><img src="../../public/img/footer-youtube.png" alt=""></a>
+                        <a href=""><img src="../../public/img/footer-pinterest.png" alt=""></a>
+                        <a href=""><img src="../../public/img/footer-periscope.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </footer>
 
@@ -15,5 +34,50 @@ export default {
 <style>
 footer {
     background-color: #303030;
+    height: 135px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.row {
+    display: flex;
+    width: 1200px;
+}
+
+.s-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.e-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    border: 3px solid dodgerblue;
+    background-color: transparent;
+    color: #fff;
+    font-size: 17px;
+}
+
+.socials {
+    margin-left: 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+h3 {
+    color: dodgerblue;
 }
 </style>

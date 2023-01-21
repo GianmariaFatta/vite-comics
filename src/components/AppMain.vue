@@ -30,49 +30,48 @@ export default {
                         <div class="s-column">
                             <h5>DC COMICS</h5>
                             <ul>
-                                <li>Characters</li>
-                                <li>Comics</li>
-                                <li>Movies</li>
-                                <li>TV</li>
-                                <li>Games</li>
-                                <li>Collectibles</li>
-                                <li>Videos</li>
-                                <li>Fans</li>
-                                <li>News</li>
+                                <li> <a href=""> Characters</a></li>
+                                <li> <a href=""> Comics</a></li>
+                                <li> <a href=""> Movies</a></li>
+                                <li> <a href=""> TV</a></li>
+                                <li> <a href=""> Games</a></li>
+                                <li> <a href=""> Collectibles</a></li>
+                                <li> <a href=""> Videos</a></li>
+                                <li> <a href=""> Fans</a></li>
+                                <li> <a href=""> News</a></li>
                             </ul>
                             <h5>SHOP</h5>
                             <ul>
-                                <li>Shop Dc</li>
-                                <li>Shop Dc Collectibles</li>
-
+                                <li><a href="">Shop Dc</a></li>
+                                <li><a href="">Shop Dc Collectibles</a></li>
                             </ul>
                         </div>
                         <div class="m-column">
                             <h5>DC </h5>
                             <ul>
-                                <li>Characters</li>
-                                <li>Comics</li>
-                                <li>Movies</li>
-                                <li>TV</li>
-                                <li>Games</li>
-                                <li>Collectibles</li>
-                                <li>Videos</li>
-                                <li>Fans</li>
-                                <li>News</li>
+                                <li> <a href=""> Characters</a></li>
+                                <li> <a href=""> Comics</a></li>
+                                <li> <a href=""> Movies</a></li>
+                                <li> <a href=""> TV</a></li>
+                                <li> <a href=""> Games</a></li>
+                                <li> <a href=""> Collectibles</a></li>
+                                <li> <a href=""> Videos</a></li>
+                                <li> <a href=""> Fans</a></li>
+                                <li> <a href=""> News</a></li>
                             </ul>
                         </div>
                         <div class="e-column">
                             <h5>SITES</h5>
                             <ul>
-                                <li>Characters</li>
-                                <li>Comics</li>
-                                <li>Movies</li>
-                                <li>TV</li>
-                                <li>Games</li>
-                                <li>Collectibles</li>
-                                <li>Videos</li>
-                                <li>Fans</li>
-                                <li>News</li>
+                                <li> <a href=""> Characters</a></li>
+                                <li> <a href=""> Comics</a></li>
+                                <li> <a href=""> Movies</a></li>
+                                <li> <a href=""> TV</a></li>
+                                <li> <a href=""> Games</a></li>
+                                <li> <a href=""> Collectibles</a></li>
+                                <li> <a href=""> Videos</a></li>
+                                <li> <a href=""> Fans</a></li>
+                                <li> <a href=""> News</a></li>
                             </ul>
                         </div>
                     </div>
@@ -94,9 +93,10 @@ export default {
 }
 
 main {
-    height: 100vh;
+    height: 700px;
+
     background-image: url(../public/img/footer-bg.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -114,7 +114,7 @@ section ul {
     gap: 100px
 }
 
-ul li {
+ul li a {
     font-size: 10px;
     color: #b1b1b1
 }
