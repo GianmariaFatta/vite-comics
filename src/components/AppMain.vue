@@ -63,7 +63,7 @@ export default {
                     </div>
                     <div class="col-right">
                         <div class="card">
-                            <img src="../../public/img/dc-logo-bg.png" alt="">
+                            <img src="../assets/img/dc-logo-bg.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ export default {
 main {
     height: 700px;
 
-    background-image: url(../public/img/footer-bg.jpg);
+    background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

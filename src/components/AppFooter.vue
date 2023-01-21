@@ -17,11 +17,11 @@ export default {
                 <div class="e-footer">
                     <h3>FOLLOW US</h3>
                     <div class="socials">
-                        <a href=""><img src="../../public/img/footer-facebook.png" alt=""></a>
-                        <a href=""><img src="../../public/img/footer-twitter.png" alt=""></a>
-                        <a href=""><img src="../../public/img/footer-youtube.png" alt=""></a>
-                        <a href=""><img src="../../public/img/footer-pinterest.png" alt=""></a>
-                        <a href=""><img src="../../public/img/footer-periscope.png" alt=""></a>
+                        <a href=""><img src="../assets/img/footer-facebook.png" alt=""></a>
+                        <a href=""><img src="../assets/img/footer-twitter.png" alt=""></a>
+                        <a href=""><img src="../assets/img/footer-youtube.png" alt=""></a>
+                        <a href=""><img src="../assets/img/footer-pinterest.png" alt=""></a>
+                        <a href=""><img src="../assets/img/footer-periscope.png" alt=""></a>
                     </div>
                 </div>
             </div>

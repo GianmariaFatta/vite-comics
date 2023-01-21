@@ -67,7 +67,7 @@ export default {
             <div class="row">
                 <div class="col-left">
                     <div class="card">
-                        <img src="../../public/img/dc-logo.png" alt="">
+                        <img src="../assets/img/dc-logo.png" alt="">
                     </div>
                 </div>
                 <div class="col-right">
