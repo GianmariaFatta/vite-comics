@@ -90,7 +90,11 @@ export default {
     </header>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use '../assets/scss/mixin' as*;
+
+
+
 header {
     background-color: #fff;
     width: 100%;
@@ -114,9 +118,7 @@ header {
 }
 
 .col-right ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
     list-style-type: none;
     cursor: pointer;
     gap: 10px;
@@ -124,9 +126,7 @@ header {
 
 .row {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
 
 }
 
@@ -146,10 +146,8 @@ header {
 }
 
 .card {
+    @include center-flex;
     width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 10px;
 }
 

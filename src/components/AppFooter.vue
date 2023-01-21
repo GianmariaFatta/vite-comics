@@ -31,12 +31,14 @@ export default {
 
 </template>
 
-<style>
+<style lang="scss" scoped>
+@use '../assets/scss/mixin' as*;
+@use '../assets/scss/variables' as*;
+
 footer {
-    background-color: #303030;
+    @include center-flex;
+    background-color: $mouse-grey;
     height: 135px;
-    display: flex;
-    align-items: center;
 
 
 }

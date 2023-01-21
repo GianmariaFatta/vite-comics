@@ -20,37 +20,5 @@ export default {
 </template>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-
-body {
-  background-color: #1C1C1C;
-  font-family: "Open Sans Condensed";
-
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  /* border: 2px dashed darkred */
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-li {
-  list-style-type: none;
-}
+@use './assets/scss/style.scss'
 </style>

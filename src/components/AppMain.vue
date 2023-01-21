@@ -73,7 +73,10 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/mixin' as*;
+@use '../assets/scss/variables' as*;
+
 * {
     color: #FFF
 }
@@ -94,26 +97,22 @@ main {
 
 
 section ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
     gap: 100px
 }
 
 .col-left li a {
     font-size: 10px;
-    color: #b1b1b1
+    color: $light-grey;
 }
 
 
 
 section {
+    @include center-flex;
     background-color: dodgerblue;
     height: 150px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
 
 }
@@ -136,9 +135,7 @@ a {
 
 .row {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
 }
 
 .col-left {
