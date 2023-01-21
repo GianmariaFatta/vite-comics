@@ -97,10 +97,6 @@ header {
     height: 95px;
 }
 
-
-
-
-
 .col-left {
     width: 40%;
     display: flex;
@@ -154,7 +150,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     margin: 10px;
 }
 

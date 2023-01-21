@@ -11,7 +11,7 @@ export default {
             <div class="row">
                 <div class="s-footer">
                     <button>
-                        SIGN-UP NOW!
+                        <a href="">SIGN-UP NOW!</a>
                     </button>
                 </div>
                 <div class="e-footer">
@@ -69,6 +69,10 @@ button {
     font-size: 17px;
 }
 
+button a {
+    color: #fff
+}
+
 .socials {
     margin-left: 20px;
     gap: 20px;
@@ -77,7 +81,20 @@ button {
     align-items: center;
 }
 
+
 h3 {
     color: dodgerblue;
+
+}
+
+/* HOVER */
+
+button:hover {
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+.socials a img:hover {
+    filter: brightness(10);
 }
 </style>

@@ -35,12 +35,7 @@ a {
 
 body {
   background-color: #1C1C1C;
-  font-family: sans-serif;
-  font-family: 'Alegreya',
-    serif;
-  font-family: 'Domine',
-    serif;
-  height: auto;
+  font-family: "Open Sans Condensed";
 
 }
 

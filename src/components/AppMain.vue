@@ -1,6 +1,14 @@
 <script>
 export default {
-    name: "AppMain"
+    name: "AppMain",
+    data() {
+        return {
+            comicsLinks: ["Characters", "Comics", "Movies", "TV", "Games", "Collectibles", "Videos", "Fans", "News"],
+            shopLinks: ["Shop DC", "Shop Dc Collectibles"],
+            dcLinks: ["Terms Of Use", "Privacy policy (new)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshop", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
+            sitesLinks: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "Dc Power Visa"],
+        }
+    }
 }
 
 </script>
@@ -28,50 +36,28 @@ export default {
                 <div class="row">
                     <div class="col-left">
                         <div class="s-column">
-                            <h5>DC COMICS</h5>
+                            <h3>DC COMICS</h3>
                             <ul>
-                                <li> <a href=""> Characters</a></li>
-                                <li> <a href=""> Comics</a></li>
-                                <li> <a href=""> Movies</a></li>
-                                <li> <a href=""> TV</a></li>
-                                <li> <a href=""> Games</a></li>
-                                <li> <a href=""> Collectibles</a></li>
-                                <li> <a href=""> Videos</a></li>
-                                <li> <a href=""> Fans</a></li>
-                                <li> <a href=""> News</a></li>
+                                <li v-for="comicsLink in comicsLinks"> <a href=""> {{ comicsLink }}</a></li>
                             </ul>
-                            <h5>SHOP</h5>
+                            <h3>SHOP</h3>
                             <ul>
-                                <li><a href="">Shop Dc</a></li>
-                                <li><a href="">Shop Dc Collectibles</a></li>
+                                <li v-for="shopLink in shopLinks"><a href="">{{ shopLink }}</a></li>
+
                             </ul>
                         </div>
                         <div class="m-column">
-                            <h5>DC </h5>
+                            <h3>DC </h3>
                             <ul>
-                                <li> <a href=""> Characters</a></li>
-                                <li> <a href=""> Comics</a></li>
-                                <li> <a href=""> Movies</a></li>
-                                <li> <a href=""> TV</a></li>
-                                <li> <a href=""> Games</a></li>
-                                <li> <a href=""> Collectibles</a></li>
-                                <li> <a href=""> Videos</a></li>
-                                <li> <a href=""> Fans</a></li>
-                                <li> <a href=""> News</a></li>
+                                <li v-for="dcLink in dcLinks"><a href="">{{ dcLink }} </a></li>
+
                             </ul>
                         </div>
                         <div class="e-column">
-                            <h5>SITES</h5>
+                            <h3>SITES</h3>
                             <ul>
-                                <li> <a href=""> Characters</a></li>
-                                <li> <a href=""> Comics</a></li>
-                                <li> <a href=""> Movies</a></li>
-                                <li> <a href=""> TV</a></li>
-                                <li> <a href=""> Games</a></li>
-                                <li> <a href=""> Collectibles</a></li>
-                                <li> <a href=""> Videos</a></li>
-                                <li> <a href=""> Fans</a></li>
-                                <li> <a href=""> News</a></li>
+                                <li v-for="siteLink in sitesLinks"> <a href=""> {{ siteLink }}</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -103,7 +89,7 @@ main {
 #comics {
     overflow: hidden;
     padding: 30px;
-    height: 38%;
+    height: 60%;
 }
 
 
@@ -114,14 +100,16 @@ section ul {
     gap: 100px
 }
 
-ul li a {
+.col-left li a {
     font-size: 10px;
     color: #b1b1b1
 }
 
+
+
 section {
     background-color: dodgerblue;
-    height: 100px;
+    height: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -132,10 +120,11 @@ section {
 
 #contents {
     width: 100%;
-    height: 80px;
+    height: 130px;
     display: flex;
     justify-content: left;
     align-items: center;
+    font-size: 25px;
     /* background-color: #1c1c1c; */
 
 
@@ -159,7 +148,17 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
 }
+
+.s-column li a,
+.m-column li a,
+.e-column li a {
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
 
 .col-right {
     width: 50%;
@@ -175,28 +174,35 @@ a {
 
 img {
     position: absolute;
-    top: -175px;
+    top: -200px;
     right: 100px;
-    width: 60%;
+    width: 100%;
     z-index: 0;
 }
 
 .s-column {
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 
 .m-column {
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 
 .e-column {
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 
-h5 {
-    margin: 10px 0
+h3 {
+    margin: 15px 0
+}
+
+/* HOVER */
+.s-column li a:hover,
+.m-column li a:hover,
+.e-column li a:hover {
+    color: dodgerblue
 }
 </style>
