@@ -5,17 +5,17 @@ export default {
         return {
             pages: [
                 {
-                    text: 'Characters',
+                    text: 'CHARACTERS',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Comics',
+                    text: 'COMICS',
                     url: '#',
                     current: true,
                 },
                 {
-                    text: 'Movies',
+                    text: 'MOVIES',
                     url: '#',
                     current: false,
                 },
@@ -25,32 +25,32 @@ export default {
                     current: false,
                 },
                 {
-                    text: 'Games',
+                    text: 'GAMES',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Collectibles',
+                    text: 'COLLECTIBLES',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Videos',
+                    text: 'VIDEOS',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Fans',
+                    text: 'FANS',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'News',
+                    text: 'NEWS',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Shop',
+                    text: 'SHOP',
                     url: '#',
                     current: false,
                 },
@@ -62,55 +62,58 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-left">
-
-                <img src="../public/img/dc-logo.png" alt="">
-
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <div class="card">
+                        <img src="../../public/img/dc-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-right">
+                    <ul>
+                        <li v-for="page in pages " class=""><a :href="page.url" :key="page.text"></a>{{ page.text }}
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-right">
-                <ul>
-                    <li v-for="page in pages " :class="page.current"><a :href="page.url"></a>{{ page.text }}</li>
-                </ul>
-            </div>
-        </div>
-        <div class="jumbo">
-            <a href="#">
-                <h3>-->Content goes here </h3>
-            </a>
-        </div>
-    </div>
 
+            <!-- <div class="jumbo">
+            <div class="row">
+
+                <a href="#">
+                    <h3>Content goes here</h3>
+                </a>
+            </div>
+        </div> -->
+        </div>
+    </header>
 </template>
 
-<style>
-* {
-    box-sizing: border-box;
+<style scoped>
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 95px;
 }
 
-img {
 
-    max-width: 100%;
-    padding: 5px;
 
-}
 
-.container {
-    max-width: 1048;
-}
 
 .col-left {
     width: 40%;
     display: flex;
     justify-content: left;
     align-items: center;
-    vertical-align: middle;
-    line-height: 150px;
 }
 
 .col-right {
     width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 
 }
 
@@ -124,6 +127,7 @@ img {
 }
 
 .row {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,13 +137,35 @@ img {
 .jumbo {
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: left;
     height: 100px;
+    width: 100%;
+    border: 2px solid red;
 
 }
 
 .jumbo a {
     color: #fff;
-    text-decoration: none;
+    text-align: left;
+}
+
+.card {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.active {
+    color: dodgerblue;
+    border-bottom: 4px solid dodgerblue;
+}
+
+li {
+    padding: 32px 0;
+    font-size: 13px;
+    font-weight: bold;
 }
 </style>
