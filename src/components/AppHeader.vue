@@ -106,14 +106,16 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
+    // border: 2px dashed darkblue
 }
 
 .col-right {
     width: 60%;
     height: auto;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
+    // border: 2px dashed darkred;
 
 }
 
@@ -124,21 +126,22 @@ header {
     gap: 10px;
 }
 
+
 .row {
     width: 100%;
     @include center-flex;
 
 }
 
-.jumbo {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    height: 100px;
-    width: 100%;
-    border: 2px solid red;
+// .jumbo {
+//     display: flex;
+//     justify-content: left;
+//     align-items: left;
+//     height: 100px;
+//     width: 100%;
+//     border: 2px solid red;
 
-}
+// }
 
 .jumbo a {
     color: #fff;
@@ -158,7 +161,7 @@ header {
 
 li {
     padding: 32px 0;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: bold;
 }
 </style>

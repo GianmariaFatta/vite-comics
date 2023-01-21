@@ -15,10 +15,10 @@ export default {
 
 <template>
     <main>
-        <div class="container">
-            <div id="contents">
+        <div id="contents">
+            <div class="container">
                 <a href="">
-                    <h3>Contents goes here</h3>
+                    <h3>Content goes here</h3>
                 </a>
             </div>
         </div>
@@ -120,13 +120,18 @@ section {
 #contents {
     width: 100%;
     height: 130px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
     font-size: 25px;
-    /* background-color: #1c1c1c; */
+    background-color: #242424;
+    line-height: 100px;
 
 
+
+}
+
+#contents .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 a {
