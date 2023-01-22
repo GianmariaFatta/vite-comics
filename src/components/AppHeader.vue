@@ -3,6 +3,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
+            currentIndex: 0,
             pages: [
                 {
                     text: 'CHARACTERS',
@@ -56,6 +57,10 @@ export default {
                 },
             ]
         }
+    }, methods: {
+        setCurrentIndex(index) {
+            this.currentIndex = index
+        }
     }
 }
 
@@ -72,20 +77,12 @@ export default {
                 </div>
                 <div class="col-right">
                     <ul>
-                        <li v-for="page in pages " class=""><a :href="page.url" :key="page.text"></a>{{ page.text }}
+                        <li v-for="(page, i) in pages " :class="{ 'active': i === currentIndex }"
+                            @click="setCurrentIndex(i)"><a :href="page.url" :key="page.text"></a>{{ page.text }}
                         </li>
                     </ul>
                 </div>
             </div>
-
-            <!-- <div class="jumbo">
-            <div class="row">
-
-                <a href="#">
-                    <h3>Content goes here</h3>
-                </a>
-            </div>
-        </div> -->
         </div>
     </header>
 </template>
@@ -123,8 +120,9 @@ header {
     @include center-flex;
     list-style-type: none;
     cursor: pointer;
-    gap: 10px;
+    gap: 30px;
 }
+
 
 
 .row {
@@ -133,20 +131,9 @@ header {
 
 }
 
-// .jumbo {
-//     display: flex;
-//     justify-content: left;
-//     align-items: left;
-//     height: 100px;
-//     width: 100%;
-//     border: 2px solid red;
 
-// }
 
-.jumbo a {
-    color: #fff;
-    text-align: left;
-}
+
 
 .card {
     @include center-flex;
@@ -156,12 +143,12 @@ header {
 
 .active {
     color: dodgerblue;
-    border-bottom: 4px solid dodgerblue;
+    border-bottom: 5px solid dodgerblue;
 }
 
 li {
-    padding: 32px 0;
-    font-size: 20px;
+    padding: 30px 3px;
+    font-size: 18px;
     font-weight: bold;
 }
 </style>
