@@ -72,7 +72,7 @@ export default {
             <div class="row">
                 <div class="col-left">
                     <div class="card">
-                        <img src="../assets/img/dc-logo.png" alt="">
+                        <a href=""><img src="../assets/img/dc-logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-right">
