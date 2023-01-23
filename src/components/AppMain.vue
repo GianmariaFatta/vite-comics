@@ -25,6 +25,9 @@ export default {
                     <AppCard v-for="comic in comics" :key="comic.series" :comic="comic" />
                 </div>
             </div>
+            <div class="row-button">
+                <button><a href=""> LOAD MORE</a></button>
+            </div>
         </div>
         <section>
             <ul>
@@ -85,9 +88,22 @@ export default {
     color: #FFF
 }
 
-main {
-    height: 1000px;
+.row-button {
+    @include center-flex;
 
+    button {
+        margin-top: 80px;
+        width: 140px;
+        height: 30px;
+        background-color: dodgerblue;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}
+
+
+
+main {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,7 +140,7 @@ section {
 
 #contents {
     width: 100%;
-    min-height: 380px;
+    min-height: 500px;
     font-size: 25px;
     background-color: #242424;
     padding: 20px
@@ -141,25 +157,21 @@ a {
 }
 
 .comic-row {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.comic-row img {
-    width: 100%;
-    height: 160px;
-}
+
 
 .row {
     width: 100%;
+    height: 400px;
     @include center-flex;
 }
 
 .col-left {
     width: 50%;
-    height: 200px;
+    height: 380px;
     /* border: 2px dashed blue; */
     display: flex;
     justify-content: flex-start;
@@ -173,6 +185,7 @@ a {
     display: inline-block;
     font-size: 15px;
     margin-bottom: 3px;
+
 }
 
 
@@ -183,39 +196,23 @@ a {
 
 }
 
-.card {
-    width: 60%;
-
-}
-
-.comic-card {
-    padding: 30px;
-    width: calc(100% / 6);
-    height: 20px;
-}
-
-// .comics img {
-//     width: 100%;
-// }
-
 .col-right img {
     position: absolute;
-    top: -200px;
+    top: -280px;
     right: 100px;
     width: 100%;
     z-index: 0;
 }
 
-.s-column {
-    width: 30%;
-    height: 100%;
+.card {
+    width: 60%;
+
 }
 
-.m-column {
-    width: 30%;
-    height: 100%;
-}
 
+
+.s-column,
+.m-column,
 .e-column {
     width: 30%;
     height: 100%;

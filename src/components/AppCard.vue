@@ -10,25 +10,26 @@ export default {
 
 <template>
     <div class="comic-card">
-        <img :src="comic.thumb" :alt="comic.series">
+        <div class="card">
+            <img :src="comic.thumb" :alt="comic.series">
+        </div>
+        <h6>{{ comic.series }}</h6>
     </div>
 </template>
 
 
 <style scoped>
-.row {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
+.card {
+    height: 177px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.card {
-
-    height: 10px;
-    padding: 20px;
+.comic-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% / 6);
+    height: 220px;
+    padding: 25px;
 }
 </style>
