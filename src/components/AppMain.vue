@@ -88,6 +88,12 @@ export default {
     color: #FFF
 }
 
+main {
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .row-button {
     @include center-flex;
 
@@ -101,32 +107,11 @@ export default {
     }
 }
 
-
-
-main {
-    background-image: url(../assets/img/footer-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 #comics {
     overflow: hidden;
     padding: 30px;
     height: 60%;
-
 }
-
-
-section ul {
-    @include center-flex;
-    gap: 100px
-}
-
-.col-left li a {
-    font-size: 10px;
-    color: $light-grey;
-}
-
 
 
 section {
@@ -136,6 +121,21 @@ section {
     width: 100%;
     color: white;
 
+    ul {
+        @include center-flex;
+        gap: 100px
+    }
+}
+
+.row {
+    width: 100%;
+    height: 400px;
+    @include center-flex;
+}
+
+.col-left li a {
+    font-size: 10px;
+    color: $light-grey;
 }
 
 #contents {
@@ -143,30 +143,12 @@ section {
     min-height: 500px;
     font-size: 25px;
     background-color: #242424;
-    padding: 20px
-}
-
-#contents .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-a {
-    color: #fff
+    padding: 20px 0;
 }
 
 .comic-row {
     display: flex;
     flex-wrap: wrap;
-}
-
-
-
-.row {
-    width: 100%;
-    height: 400px;
-    @include center-flex;
 }
 
 .col-left {
@@ -194,22 +176,14 @@ a {
     /* border: 2px dashed blue; */
     position: relative;
 
+    img {
+        position: absolute;
+        top: -280px;
+        right: 100px;
+        width: 100%;
+        z-index: 0;
+    }
 }
-
-.col-right img {
-    position: absolute;
-    top: -280px;
-    right: 100px;
-    width: 100%;
-    z-index: 0;
-}
-
-.card {
-    width: 60%;
-
-}
-
-
 
 .s-column,
 .m-column,
@@ -227,5 +201,11 @@ h3 {
 .m-column li a:hover,
 .e-column li a:hover {
     color: dodgerblue
+}
+
+.comic-card:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+
 }
 </style>

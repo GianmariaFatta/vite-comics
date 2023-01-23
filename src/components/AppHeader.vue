@@ -139,7 +139,7 @@ header {
 }
 
 li {
-    padding: 30px 3px;
+    padding: 33px 3px;
     font-size: 18px;
     font-weight: bold;
 }
