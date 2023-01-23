@@ -3,7 +3,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
-            currentIndex: 0,
+            currentIndex: 1,
             pages: [
                 {
                     text: 'CHARACTERS',
