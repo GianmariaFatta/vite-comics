@@ -39,8 +39,8 @@ footer {
     @include center-flex;
     background-color: $mouse-grey;
     height: 135px;
-
-
+    position: relative;
+    z-index: 1;
 }
 
 .row {

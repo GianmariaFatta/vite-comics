@@ -1,4 +1,5 @@
 <script>
+import AppCard from './AppCard.vue';
 export default {
     name: "AppMain",
     data() {
@@ -8,6 +9,9 @@ export default {
             dcLinks: ["Terms Of Use", "Privacy policy (new)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshop", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
             sitesLinks: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "Dc Power Visa"],
         }
+    }, components: { AppCard },
+    props: {
+        comics: Array
     }
 }
 
@@ -17,9 +21,9 @@ export default {
     <main>
         <div id="contents">
             <div class="container">
-                <a href="">
-                    <h3>Content goes here</h3>
-                </a>
+                <div class="comic-row">
+                    <AppCard v-for="comic in comics" :key="comic.series" :comic="comic" />
+                </div>
             </div>
         </div>
         <section>
@@ -82,7 +86,7 @@ export default {
 }
 
 main {
-    height: 700px;
+    height: 1000px;
 
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
@@ -93,6 +97,7 @@ main {
     overflow: hidden;
     padding: 30px;
     height: 60%;
+
 }
 
 
@@ -119,13 +124,10 @@ section {
 
 #contents {
     width: 100%;
-    height: 130px;
+    min-height: 380px;
     font-size: 25px;
     background-color: #242424;
-    line-height: 100px;
-
-
-
+    padding: 20px
 }
 
 #contents .container {
@@ -136,6 +138,18 @@ section {
 
 a {
     color: #fff
+}
+
+.comic-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comic-row img {
+    width: 100%;
+    height: 160px;
 }
 
 .row {
@@ -174,7 +188,17 @@ a {
 
 }
 
-img {
+.comic-card {
+    padding: 30px;
+    width: calc(100% / 6);
+    height: 20px;
+}
+
+// .comics img {
+//     width: 100%;
+// }
+
+.col-right img {
     position: absolute;
     top: -200px;
     right: 100px;
