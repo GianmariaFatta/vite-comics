@@ -1,4 +1,5 @@
 <script>
+import CreateJumbo from './CreateJumbo.vue';
 export default {
     name: "AppHeader",
     data() {
@@ -61,7 +62,7 @@ export default {
         setCurrentIndex(index) {
             this.currentIndex = index
         }
-    }
+    }, components: { CreateJumbo }
 }
 
 </script>
@@ -85,24 +86,22 @@ export default {
             </div>
         </div>
     </header>
+    <CreateJumbo />
+
 </template>
 
 <style scoped lang="scss">
-@use '../assets/scss/mixin' as*;
-
-
+@use '../assets/scss/mixins' as*;
 
 header {
     background-color: #fff;
     width: 100%;
-    height: 95px;
+    height: 100px;
 }
 
 .col-left {
+    @include left_flex;
     width: 40%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
     // border: 2px dashed darkblue
 }
 
@@ -114,26 +113,19 @@ header {
     align-items: center;
     // border: 2px dashed darkred;
 
+    ul {
+        @include center-flex;
+        list-style-type: none;
+        cursor: pointer;
+        gap: 30px;
+    }
 }
-
-.col-right ul {
-    @include center-flex;
-    list-style-type: none;
-    cursor: pointer;
-    gap: 30px;
-}
-
 
 
 .row {
-    width: 100%;
     @include center-flex;
-
+    width: 100%;
 }
-
-
-
-
 
 .card {
     @include center-flex;

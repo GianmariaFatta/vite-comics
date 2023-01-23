@@ -8,6 +8,7 @@ export default {
 <template>
     <footer>
         <div class="container">
+
             <div class="row">
                 <div class="s-footer">
                     <button>
@@ -32,7 +33,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/mixin' as*;
+@use '../assets/scss/mixins' as*;
 @use '../assets/scss/variables' as*;
 
 footer {
@@ -49,17 +50,13 @@ footer {
 }
 
 .s-footer {
+    @include left_flex;
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .e-footer {
+    @include right_flex;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 button {
@@ -69,24 +66,21 @@ button {
     background-color: transparent;
     color: #fff;
     font-size: 17px;
+
+    a {
+        color: #fff
+    }
 }
 
-button a {
-    color: #fff
-}
 
 .socials {
+    @include right_flex;
     margin-left: 20px;
     gap: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
-
 
 h3 {
     color: dodgerblue;
-
 }
 
 /* HOVER */
